@@ -5,3 +5,6 @@
 
 ## URL for ISO Images:
 - [https://drive.google.com/drive/folders/1aTnR5Kx77PMdmo2wbpWqnZ7Dr0aVovdi?usp=sharing](https://drive.google.com/drive/folders/1aTnR5Kx77PMdmo2wbpWqnZ7Dr0aVovdi?usp=sharing)
+
+## Programiz Online SQL Editor
+- [https://www.programiz.com/sql/online-compiler/](https://www.programiz.com/sql/online-compiler/)
