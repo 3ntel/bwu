@@ -394,6 +394,8 @@ VALUES(7007, 101, 8, '1-Aug-11')
 ```
 </details>
 
+>  [Run Directly on Oracle Live](https://livesql.oracle.com/apex/livesql/s/obq6rxr5hy2r0vvbhuk5ub23z "https://livesql.oracle.com/apex/livesql/s/obq6rxr5hy2r0vvbhuk5ub23z")
+
 ---
 
 ## Q & A 
