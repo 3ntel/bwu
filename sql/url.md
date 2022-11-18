@@ -1,6 +1,7 @@
 # URLS
 - ### [BNCSC101 BOOKS LINK](https://drive.google.com/drive/folders/1FpjcAAnEQn4Gb6GCA_1OJGCyMILiPXUZ?usp=sharing "https://drive.google.com/drive/folders/1FpjcAAnEQn4Gb6GCA_1OJGCyMILiPXUZ?usp=sharing")
-
+---
+- ### [BNCSC191 PRACTICAL VIDEO LINK](https://drive.google.com/drive/folders/1gCw_rYfilZjExcF2FbIsNX1rFilZPfiS?usp=sharing  "https://drive.google.com/drive/folders/1gCw_rYfilZjExcF2FbIsNX1rFilZPfiS?usp=sharing")
 ---
 
 - ### [URL OF ORACLE LIVE SQL ASSIGNMENT 1](https://livesql.oracle.com/apex/livesql/s/obq6rxr5hy2r0vvbhuk5ub23z "https://livesql.oracle.com/apex/livesql/s/obq6rxr5hy2r0vvbhuk5ub23z")
