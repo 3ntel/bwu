@@ -14,7 +14,7 @@ DROP TABLE Customers; DROP TABLE Orders; DROP TABLE Shippings; CREATE TABLE MEMB
 
 <details>
     <summary>
-    EXPAND
+    CLICK TO EXPAND CODE
     </summary>
     
 ```sql
@@ -209,7 +209,7 @@ VALUES
 
 <details>
     <summary>
-    EXPAND
+    CLICK TO EXPAND CODE
     </summary>
     
 ```sql
@@ -396,35 +396,162 @@ VALUES(7007, 101, 8, '1-Aug-11')
 
 >  [Run Directly on Oracle Live](https://livesql.oracle.com/apex/livesql/s/obq6rxr5hy2r0vvbhuk5ub23z "https://livesql.oracle.com/apex/livesql/s/obq6rxr5hy2r0vvbhuk5ub23z")
 
+
 ---
 
-## Q & A 
+## SQL Assignment – 1  
 
-### 1. Calculate the Minimum Cost, Average Cost and Total Cost value in BOOKS table and Rename the resulting attributes.
+### **Question:** Create the following tables with appropriate constraints using SQL commands.
+&nbsp;
+1) **_Table Name : Member_**
 
-- **Programiz Compiler Query + Live Oracle SQL Query**
-    ```SQL
+
+
+    |COLUMN NAME |DATA TYPE |DESCRIPTION |
+    | - | - | - |
+    |Member\_Id |Number(5) |Unique Member ID |
+    |Member\_Name |Varchar2(30) |Name of the Library member |
+    |Member\_address |Varchar2(50) |Address of the member |
+    |Acc\_Open\_Date |Date |Date of membership |
+    |Membership\_type |Varchar2(20) |Type of the membership such as ‘LIFETIME’,’ ANNUAL’, ‘HALF YEARLY’,’ QUARTERLY’ |
+    |Fees\_paid |Number(4) |Membership fees paid |
+    |Max\_Books\_Allowed |Number(2) |Total Number of books that can be issued to the member. |
+    |Penalty\_Amount |Number(7,2) |Penalty amount due |
+    
+    _CONSTRAINTS:_
+
+    1. Member\_Id – Primary Key 
+    1. Member\_Name – NOT NULL 
+    1. Membership\_type - ‘LIFETIME’ , ’ ANNUAL’ , ‘HALF YEARLY’ , ’ QUARTERLY’ 
+    1. Max\_books\_allowed <7 
+    1. Penalty\_amt maximum 1000 
+
+&nbsp;
+
+2) **_Table Name :Books_**
+
+
+
+    |COLUMN NAME||DATA TYPE||DESCRIPTION|
+    | - | :- | - | :- | - |
+    |Book\_No ||Number(6) ||Book identification number|
+    |Book\_Name ||VarChar2(30) ||Name of the book |
+    |Author\_name ||Varchar2(30) ||Author of the book |
+    |Cost ||Number(7,2) ||Cost of the book |
+    |Category ||Char(10) ||Category like Science , Fiction etc. |
+    
+    _CONSTRAINTS:_
+
+    1. Book\_No – Primary Key 
+    1. Book\_Name – Not Null 
+    1. Category – Science, Database, System, Others. 
+
+&nbsp;
+
+3) **_Table Name :Issue_**
+
+
+
+    |COLUMN NAME||DATA TYPE||DESCRIPTION|
+    | - | :- | - | :- | - |
+    |Lib\_Issue\_Id ||Number(10) ||Library Book Issue No |
+    |Book\_No ||Number(6) ||The ID of book, which is issued|
+    |Member\_Id ||Number(5) ||Member that issued the book|
+    |Issue\_Date ||Date ||Date of Issue |
+    |Return\_date ||Date ||Return date |
+
+    _CONSTRAINTS:_
+
+    1. Lib\_Issue\_Id -Primary key 
+    1. Book\_No - foreign key 
+    1. Member\_id - foreign key 
+
+
+> ### [SQL Assignment - 1 Solutions](#run-query-on-oracle-live-sql-compiler)
+
+---
+
+## SQL Assignment – 2  
+
+### 1. Retrieve the Name of Book and Cost who has Maximum cost.
+
+- **Programiz Compiler Query**
+    ```sql
+    SELECT
+        BOOK_NAME,
+        COST
+    FROM
+        BOOKS
+    WHERE
+        COST = (
+            SELECT
+        MAX(COST)
+    FROM
+        BOOKS
+        );            
+    ```
+
+### 2. Calculate the Minimum Cost, Average Cost and Total Cost value in BOOKS table and Rename the resulting attributes.
+
+- **Programiz Compiler Query**
+    ```sql
     SELECT
         MIN(COST) AS "MINIMUM COST",
         AVG(COST) AS "AVERAGE COST",
         MAX(COST) AS "MAXIMUM COST"
     FROM
-    BOOKS;
+        BOOKS;        
+    ```
+    
+ ### 3. Retrieve the Name and ID of Members who's issued book between 26th January 2011 and 14th April 2011.
+
+- **Programiz Compiler Query**
+    ```sql
+    SELECT
+        MEMBER_ID,
+        MEMBER_NAME
+    FROM
+        MEMBER
+    WHERE
+        MEMBER_ID IN (
+            SELECT
+        MEMBER_ID
+    FROM
+        ISSUE
+    WHERE
+        ISSUE_DATE BETWEEN '2011-01-26'
+        AND '2011-04-14'
+        );       
+    ```
+### 4. Retrieve Book Name, Author Name and Category whose category is not 'OTHERS'
+
+- **Programiz Compiler Query**
+    ```sql
+    SELECT
+        BOOK_NAME,
+        AUTHOR_NAME,
+        CATEGORY
+    FROM
+        BOOKS
+    WHERE
+        NOT CATEGORY = 'OTHERS';         
+    ```
+    
+### 5. Retrieve Book Name and Author Name where 5th letter of the Author name is 't'.
+
+- **Programiz Compiler Query**
+    ```sql
+    SELECT
+        BOOK_NAME,
+        AUTHOR_NAME
+    FROM
+        BOOKS
+    WHERE
+        AUTHOR_NAME LIKE '____t%';           
     ```
 
-### 2. What is the greatest value between 4, 5 and 17.
-- **Programiz Compiler Query**
-     ```SQL
-    SELECT
-    MAX(4, 5, 17)
-    FROM
-    DUAL;
-     ```
-- **Live Oracle SQL Query**
-     ```SQL
-    SELECT
-    GREATEST(4, 5, 17)
-    FROM
-    DUAL;
-     
-     ```
+---
+
+## SQL Assignment – 3  
+
+> #### Coming SOON :)
