@@ -432,13 +432,13 @@ VALUES(7007, 101, 8, '1-Aug-11')
 
 
 
-    |COLUMN NAME||DATA TYPE||DESCRIPTION|
-    | - | :- | - | :- | - |
-    |Book\_No ||Number(6) ||Book identification number|
-    |Book\_Name ||VarChar2(30) ||Name of the book |
-    |Author\_name ||Varchar2(30) ||Author of the book |
-    |Cost ||Number(7,2) ||Cost of the book |
-    |Category ||Char(10) ||Category like Science , Fiction etc. |
+    |COLUMN NAME|DATA TYPE|DESCRIPTION|
+    | - | - | - |
+    |Book\_No |Number(6) |Book identification number|
+    |Book\_Name |VarChar2(30) |Name of the book |
+    |Author\_name |Varchar2(30) |Author of the book |
+    |Cost |Number(7,2) |Cost of the book |
+    |Category |Char(10) |Category like Science , Fiction etc. |
     
     _CONSTRAINTS:_
 
@@ -452,13 +452,13 @@ VALUES(7007, 101, 8, '1-Aug-11')
 
 
 
-    |COLUMN NAME||DATA TYPE||DESCRIPTION|
-    | - | :- | - | :- | - |
-    |Lib\_Issue\_Id ||Number(10) ||Library Book Issue No |
-    |Book\_No ||Number(6) ||The ID of book, which is issued|
-    |Member\_Id ||Number(5) ||Member that issued the book|
-    |Issue\_Date ||Date ||Date of Issue |
-    |Return\_date ||Date ||Return date |
+    |COLUMN NAME|DATA TYPE|DESCRIPTION|
+    | - | - | - |
+    |Lib\_Issue\_Id |Number(10) |Library Book Issue No |
+    |Book\_No |Number(6) |The ID of book, which is issued|
+    |Member\_Id |Number(5) |Member that issued the book|
+    |Issue\_Date |Date |Date of Issue |
+    |Return\_date |Date |Return date |
 
     _CONSTRAINTS:_
 
